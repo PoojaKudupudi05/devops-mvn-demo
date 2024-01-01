@@ -9,7 +9,7 @@ pipeline{
     stages{
         stage('Git Checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'myhub', url: 'https://github.com/PoojaKudupudi05/devops-mvn-demo']]])        }
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'mygit', url: 'https://github.com/PoojaKudupudi05/devops-mvn-demo']]])        }
         }
         stage('mvn clean'){
             steps{
